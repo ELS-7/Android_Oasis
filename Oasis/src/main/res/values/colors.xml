@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbarColor">#5CB3FF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="startBtn">#82CAFF</color>
+    <color name="selected">#0055FF</color>
+    <color name="even_row_color">#BDEDFF</color> <!-- 로빈 계란 블루 -->
+    <color name="odd_row_color">#82CAFA</color> <!-- 라이트 스카이 블루 -->
+
+</resources>

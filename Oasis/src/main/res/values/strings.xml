@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Oasis</string>
+    <string name="select_category">카테고리를 선택하세요</string>
+    <string name="select_type">종류를 선택하세요</string>
+</resources>

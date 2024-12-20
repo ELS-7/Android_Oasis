@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/main1"
+        android:title="메인"
+        android:icon="@drawable/homeic"
+        />
+    <item android:id="@+id/todo2"
+        android:title="Todo"
+        android:icon="@drawable/note"
+        />
+    <item android:id="@+id/news3"
+        android:title="뉴스"
+        android:icon="@drawable/news"
+        />
+    <item android:id="@+id/alarm4"
+        android:title="알람"
+
+        android:icon="@drawable/ic_clock"
+        />
+    <item android:id="@+id/shell5"
+        android:title="게임"
+        android:icon="@drawable/game"
+        />
+    <item android:id="@+id/dinner6"
+        android:title="저녁메뉴"
+        android:icon="@drawable/dinner"
+        />
+</menu>

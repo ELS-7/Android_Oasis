@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+    <!-- 메모 제목 -->
+    <TextView
+        android:id="@+id/memo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- 메모 작성 시간 -->
+    <TextView
+        android:id="@+id/memo_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- 메모 내용 (미리보기) -->
+    <TextView
+        android:id="@+id/memo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:maxLines="2"
+        android:ellipsize="end" />
+</LinearLayout>

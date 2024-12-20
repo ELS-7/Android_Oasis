@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- 흐린 배경 이미지 -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_sea"
+        android:scaleType="centerCrop"
+        android:alpha="0.6" />
+
+    <!-- 나머지 요소들은 FrameLayout 안에 배치 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <!-- Toolbar 추가 -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarColor"
+            android:title="알람 설정"
+            android:titleTextColor="#FFFFFF"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:elevation="4dp" />
+
+        <!-- 첫 번째 알람 등록 섹션 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="타이머 설정"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/elap"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:gravity="right"
+                    android:text="5"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="초 후에 알람"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- 알람 등록/취소 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/reg1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="알람 등록"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_rounded_background2"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="15dp"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/cancel1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="알람 취소"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_rounded_background2"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:padding="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 두 번째 알람 등록 섹션 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알람 설정"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="datetime"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </LinearLayout>
+
+            <!-- 알람 등록/취소 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/reg2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="알람 등록"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_rounded_background"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="15dp"
+                    android:padding="12dp" />
+
+                <Button
+                    android:id="@+id/cancel2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="알람 취소"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_rounded_background"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 시계 아이콘 -->
+        <ImageView
+            android:id="@+id/clock_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_clock"
+            android:layout_centerHorizontal="true"
+
+            android:visibility="gone" />
+
+        <!-- 남은 시간 텍스트 -->
+        <TextView
+            android:id="@+id/remaining_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남은 시간: 00:00"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</FrameLayout>
+    <!-- LinearLayout으로 해도 되지만,  메뉴를 xml로 구현하려면 NavigationView로  -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/layout"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_layout"
+        app:menu="@menu/test_menu"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>

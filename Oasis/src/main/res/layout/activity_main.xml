@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 흐린 배경 이미지 -->
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background_sea"
+            android:scaleType="centerCrop"
+            android:alpha="0.5" /> <!-- 투명도 조절 (0.0 ~ 1.0) -->
+        <!-- 툴바 추가 -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarColor"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="바쁜 삶 속 작은 쉼터,\n오아시스에 오신걸 환영합니다."
+                android:textSize="20sp"
+                android:layout_marginTop="30sp"/>
+
+            <!-- 이미지 추가 -->
+            <ImageView
+                android:id="@+id/welcome_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/img_oasis"
+                android:contentDescription="Welcome Image" />
+
+            <!-- Todo List -->
+            <Button
+                android:id="@+id/button_todo_list"
+                android:layout_width="200sp"
+                android:layout_height="55sp"
+                android:layout_marginBottom="10dp"
+                android:text="Todo List"
+                app:backgroundTint="@null"
+                android:background="@drawable/button_rounded_background"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!-- 뉴스보기 -->
+            <Button
+                android:id="@+id/button_news"
+                android:layout_width="200sp"
+                android:layout_height="55sp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/button_rounded_background2"
+                android:textColor="@color/black"
+
+                android:text="뉴스 보기"
+                android:textSize="20sp" />
+
+            <!-- 알람 관리 -->
+            <Button
+                android:id="@+id/button_alarm"
+                android:layout_width="200sp"
+                android:layout_height="55sp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/button_rounded_background"
+                android:textColor="@color/black"
+
+                android:text="알람 관리"
+                android:textSize="20sp" />
+
+            <!-- 쥐 잡기 게임 -> 조개잡기 -->
+            <Button
+                android:id="@+id/button_catch_rat"
+                android:layout_width="200sp"
+                android:layout_height="55sp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/button_rounded_background2"
+                android:textColor="@color/black"
+
+                android:text="조개 잡기 게임"
+                android:textSize="20sp" />
+
+            <!-- 저녁메뉴 -->
+            <Button
+                android:id="@+id/button_recommend"
+                android:layout_width="200sp"
+                android:layout_height="55sp"
+                app:backgroundTint="@null"
+                android:background="@drawable/button_rounded_background"
+                android:textColor="@color/black"
+
+                android:text="저녁 메뉴 "
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </FrameLayout>
+    <!-- LinearLayout으로 해도 되지만,  메뉴를 xml로 구현하려면 NavigationView로  -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/layout"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_layout"
+        app:menu="@menu/test_menu"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
